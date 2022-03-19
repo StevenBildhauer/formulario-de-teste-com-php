@@ -1,3 +1,7 @@
+<?php
+session_status();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,6 +14,7 @@
 <body>
     
     <form action="formulario.php" method="POST">
+        
         Nome: <input type="text" type="text" name="nome">
         <br>
         idade: <input type="number" type="number" name="idade">
@@ -18,13 +23,13 @@
     </form>
 
 <?php
-
+session_status();
 
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 
 if (empty($nome)){
-  echo 'preencha todos os campos';
+  $_SESSION['erro'] =  'preencha todos os campos';
   return;
 }
 
