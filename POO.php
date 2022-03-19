@@ -1,12 +1,26 @@
 <?php
 
-$conta  = new contabanco();
+$conta  = new contabanco; // meu objeto
 
 class contabanco {
-    private $saldo = 3245;
-    public $titular = 'Steven Bildhauer';
-    private $poupanca = 12563.34;
+    public $saldo;
+    public $titular;
+    public $poupanca;
+    public $banco;
+    
+   public function __construct($bancoSSA,$titular,$agencia,$saldo){ // recebe os atributos da new contabanco
+        }
+        
+
+    public function meuSaldo(){
+        return 'Saldo é:';
+    }
 
 }
-var_dump($conta->$saldo);
 
+$conta = new contabanco('bancoSSA', 'titular','agencia','saldo',);
+
+
+/*
+var_dump($conta->meuSaldo()); // verificar uma variavel
+*/
